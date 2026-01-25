@@ -7,13 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dashboard Page</title>
     @Vite('resources/css/app.css')
+    <!-- Example in Blade layout -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
-
-    <div class="bg-red-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, consequuntur numquam vel
-        doloribus adipisci, mollitia quidem veritatis eius, praesentium doloremque quam hic. Voluptatum, quaerat
-        repellendus vero a delectus recusandae est.</div>
+    <div class="bg-lightbg text-textprimary font-body">
+        <h1 class="font-heading text-3xl text-textprimary">Our Collection</h1>
+        <p class="text-textsecondary">Luxury jewelry curated for you.</p>
+    </div>
 
 </body>
 

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry Theme Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        .theme-card {
+            transition: all 0.3s ease;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        .theme-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .gradient-border {
+            position: relative;
+            border-radius: 12px;
+        }
+
+        .gradient-border::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--start-color), var(--end-color));
+            border-radius: 14px;
+            z-index: -1;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .luxury-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .elegant-font {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.3s ease-out;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div
+                        class="w-10 h-10 rounded-full bg-gradient-to-r from-amber-400 to-yellow-500 flex items-center justify-center shadow-lg">
+                        <i class="fas fa-gem text-white text-lg"></i>
+                    </div>
+                    <span class="ml-3 text-2xl luxury-font font-bold text-gray-800">Jewel<span
+                            class="text-amber-600">Theme</span>Showcase</span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#themes" class="text-gray-700 hover:text-amber-600 font-medium">Themes</a>
+                    <a href="#elements" class="text-gray-700 hover:text-amber-600 font-medium">Elements</a>
+                    <a href="#palettes" class="text-gray-700 hover:text-amber-600 font-medium">Palettes</a>
+                </nav>
+                <button
+                    class="bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-white font-medium py-2 px-6 rounded-full shadow-lg">
+                    Shop Now
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="py-16 bg-gradient-to-b from-white to-gray-50">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-5xl luxury-font font-bold text-gray-800 mb-6">Luxury Jewelry Color Themes
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-10 elegant-font">
+                    Discover 10 elegant color themes for your jewelry e-commerce website. Each theme is designed to
+                    convey luxury, sophistication, and elegance.
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <button
+                        class="bg-gray-800 hover:bg-gray-900 text-white font-medium py-3 px-8 rounded-full shadow-lg transition-all duration-300">
+                        View All Themes
+                    </button>
+                    <button
+                        class="border-2 border-gray-300 hover:border-gray-400 text-gray-700 font-medium py-3 px-8 rounded-full transition-all duration-300">
+                        Get Color Codes
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- UI Elements Showcase -->
+        <section id="elements" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl luxury-font font-bold text-center text-gray-800 mb-12">UI Elements Showcase</h2>
+
+                <div class="bg-white rounded-2xl shadow-xl p-8 mb-12">
+                    <h3 class="text-2xl elegant-font font-semibold text-gray-800 mb-8 text-center">Interactive Elements
+                        (Click on themes above to update colors)</h3>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                        <!-- Buttons -->
+                        <div class="space-y-6">
+                            <h4 class="text-lg font-medium text-gray-800 border-b pb-2">Button Styles</h4>
+                            <button id="primary-button"
+                                class="w-full py-3 rounded-lg text-white font-medium shadow-md"
+                                style="background-color: #D4AF37;">Primary Button</button>
+                            <button id="secondary-button" class="w-full py-3 rounded-lg font-medium border-2"
+                                style="border-color: #D4AF37; color: #D4AF37;">Secondary Button</button>
+                            <button
+                                class="w-full py-3 rounded-lg font-medium bg-gray-100 hover:bg-gray-200 text-gray-800 transition-all">Neutral
+                                Button</button>
+                        </div>
+
+                        <!-- Inputs -->
+                        <div class="space-y-6">
+                            <h4 class="text-lg font-medium text-gray-800 border-b pb-2">Form Elements</h4>
+                            <input id="theme-input" type="text" placeholder="Search jewelry..."
+                                class="w-full p-4 border rounded-lg focus:outline-none focus:ring-2"
+                                style="border-color: #D4AF37;">
+                            <select id="theme-select"
+                                class="w-full p-4 border rounded-lg focus:outline-none focus:ring-2"
+                                style="border-color: #D4AF37;">
+                                <option>Select Category</option>
+                                <option>Rings</option>
+                                <option>Necklaces</option>
+                                <option>Earrings</option>
+                            </select>
+                            <div class="flex items-center">
+                                <input id="theme-checkbox" type="checkbox" class="mr-3"
+                                    style="accent-color: #D4AF37;">
+                                <label for="theme-checkbox" class="text-gray-700">Subscribe to newsletter</label>
+                            </div>
+                        </div>
+
+                        <!-- Cards -->
+                        <div class="space-y-6">
+                            <h4 class="text-lg font-medium text-gray-800 border-b pb-2">Product Cards</h4>
+                            <div id="product-card" class="border rounded-xl p-4 hover:shadow-lg transition-all"
+                                style="border-color: #FFD700;">
+                                <div id="product-image"
+                                    class="w-full h-40 mb-4 rounded-lg flex items-center justify-center"
+                                    style="background: linear-gradient(135deg, #FFD700, #D4AF37);">
+                                    <i class="fas fa-gem text-white text-4xl"></i>
+                                </div>
+                                <h5 class="font-medium text-gray-800 mb-2">Gold Diamond Ring</h5>
+                                <p class="text-sm text-gray-600 mb-3">Elegant 18K gold ring with diamond</p>
+                                <div class="flex justify-between items-center">
+                                    <span id="product-price" class="font-bold" style="color: #D4AF37;">$1,299</span>
+                                    <button id="add-to-cart" class="py-1 px-4 rounded-full text-white text-sm"
+                                        style="background-color: #D4AF37;">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Navigation -->
+                        <div class="space-y-6">
+                            <h4 class="text-lg font-medium text-gray-800 border-b pb-2">Navigation Items</h4>
+                            <div class="space-y-3">
+                                <a href="#" class="nav-link block p-3 rounded-lg hover:bg-gray-50"
+                                    style="color: #D4AF37;">Rings Collection</a>
+                                <a href="#" class="nav-link block p-3 rounded-lg hover:bg-gray-50"
+                                    style="color: #D4AF37;">Necklaces</a>
+                                <a href="#" class="nav-link block p-3 rounded-lg hover:bg-gray-50"
+                                    style="color: #D4AF37;">Earrings</a>
+                                <a href="#" class="nav-link block p-3 rounded-lg hover:bg-gray-50"
+                                    style="color: #D4AF37;">Bracelets</a>
+                            </div>
+                            <div class="flex space-x-4">
+                                <div class="icon-circle w-10 h-10 rounded-full flex items-center justify-center text-white"
+                                    style="background-color: #D4AF37;">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div class="icon-circle w-10 h-10 rounded-full flex items-center justify-center text-white"
+                                    style="background-color: #D4AF37;">
+                                    <i class="fas fa-shopping-bag"></i>
+                                </div>
+                                <div class="icon-circle w-10 h-10 rounded-full flex items-center justify-center text-white"
+                                    style="background-color: #D4AF37;">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Color Palette Display -->
+                    <div class="mb-12">
+                        <h4 class="text-lg font-medium text-gray-800 mb-6 text-center">Color Palette</h4>
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <div class="text-center">
+                                <div id="primary-swatch" class="w-20 h-20 rounded-lg mb-2"
+                                    style="background-color: #D4AF37;"></div>
+                                <span class="text-sm font-medium">Primary Color</span>
+                                <p id="primary-hex" class="text-xs text-gray-600">#D4AF37</p>
+                            </div>
+                            <div class="text-center">
+                                <div id="secondary-swatch" class="w-20 h-20 rounded-lg mb-2"
+                                    style="background-color: #FFD700;"></div>
+                                <span class="text-sm font-medium">Secondary Color</span>
+                                <p id="secondary-hex" class="text-xs text-gray-600">#FFD700</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-20 h-20 rounded-lg mb-2 bg-gray-800"></div>
+                                <span class="text-sm font-medium">Dark Text</span>
+                                <p class="text-xs text-gray-600">#1F2937</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-20 h-20 rounded-lg mb-2 bg-gray-100 border"></div>
+                                <span class="text-sm font-medium">Light Background</span>
+                                <p class="text-xs text-gray-600">#F9FAFB</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Typography -->
+                    <div>
+                        <h4 class="text-lg font-medium text-gray-800 mb-6 text-center">Typography Showcase</h4>
+                        <div class="space-y-4">
+                            <h1 id="main-heading" class="text-4xl luxury-font font-bold" style="color: #D4AF37;">Main
+                                Heading - Luxury Font</h1>
+                            <h2 class="text-2xl elegant-font font-semibold text-gray-800">Subheading - Elegant Font
+                            </h2>
+                            <p class="text-gray-700">This is body text using a clean sans-serif font for readability.
+                                The UI elements above will change color when you click on any theme card.</p>
+                            <p class="text-sm text-gray-600">Small text for captions and additional information.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+  
+
+</body>
+
+</html>

@@ -1,1 +1,81 @@
+/* Tailwind v4 - Import the CSS directly */
 @import "tailwindcss";
+
+/* Define theme customizations */
+@theme {
+  --color-royal-gold: #D4AF37;
+  --color-deep-navy: #0A1931;
+  --color-light-gold: #F4E4BA;
+  --color-dark-gold: #B8860B;
+  --color-off-white: #FAF9F6;
+  --color-charcoal: #2C2C2C;
+  
+  --font-playfair: 'Playfair Display', serif;
+  --font-inter: 'Inter', sans-serif;
+  
+  --animate-fade-in: fade-in 0.5s ease-out;
+  --animate-slide-up: slide-up 0.3s ease-out;
+  
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slide-up {
+    from { transform: translateY(10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+}
+
+/* Utility classes - Use @utility directive in Tailwind v4 */
+@utility btn-primary {
+  background-color: var(--color-royal-gold);
+  color: white;
+  font-weight: 500;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+  
+  &:hover {
+    background-color: var(--color-dark-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+  }
+}
+
+@utility btn-secondary {
+  border: 2px solid var(--color-royal-gold);
+  color: var(--color-royal-gold);
+  font-weight: 500;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+  
+  &:hover {
+    background-color: var(--color-royal-gold);
+    color: white;
+  }
+}
+
+@utility section-title {
+  font-family: var(--font-playfair);
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
+}
+
+@utility card-hover {
+  transition: all 0.3s ease-in-out;
+  
+  &:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    transform: translateY(-8px);
+  }
+}
