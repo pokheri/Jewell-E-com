@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Royal Gold Jewels - Header</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite('resources/css/product-card.css')
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap"
@@ -78,9 +80,28 @@
         <x-web.slider />
 
         <x-web.product-category />
-        <x-web.best-seller />
-        <x-web.product-ring />
-        {{-- <x-web.about-us /> --}}
+        {{-- <x-web.best-seller /> --}}
+        {{-- Rings section  --}}
+        {{-- <x-web.product-section title="Exquisite Rings Collection" bgColor="white"
+            subtitle="Discover our finest selection of handcrafted rings " buttonText="View all Rings" /> --}}
+
+        {{-- Rings section  --}}
+        {{-- <x-web.product-section title="Exquisite Necklace Collection" bgColor="gray-50"
+            subtitle="Add a touch of sophistication to your ensemble" buttonText="View all Necklace" /> --}}
+
+
+        {{-- <x-web.product-section title="Sparkling Earrings for Every Style" bgColor="white"
+            subtitle="Light up your look with our earring collection" buttonText="View all Earrings" /> --}}
+
+
+
+        <x-web.product-detail />
+        {{-- Rings section  --}}
+        <x-web.product-section title="Luxury Bracelet Collection" bgColor="gray-50"
+            subtitle="From delicate chains to bold cuffs" buttonText="View all Bracelet" />
+
+
+        <x-web.about-us />
         <x-web.footer />
     </main>
 

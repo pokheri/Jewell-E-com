@@ -1,28 +1,23 @@
 {{--  These button related to the best seller slider product  --}}
-
 {{-- resources/views/components/slider-button.blade.php --}}
 @props(['direction' => 'prev', 'id' => ''])
 @php
-    $positionClass = $direction === 'prev' ? 'left-0 ml-2 md:ml-0' : 'right-0 mr-2 md:mr-0';
+    $positionClass = $direction === 'prev' ? 'left-0 -ml-2 sm:-ml-3' : 'right-0 -mr-2 sm:-mr-3';
 
-    $icon = $direction === 'prev' ? '‹' : '›';
+    $svgPath = $direction === 'prev' ? 'M15 19l-7-7 7-7' : 'M9 5l7 7-7 7';
 @endphp
 
 <button
     {{ $attributes->merge([
         'id' => $id,
-        'class' => "slider-btn absolute {$positionClass}
-            top-1/2 -translate-y-1/2 z-20
-            w-[30px] h-[30px] md:w-[34px] md:h-[34px]
-            rounded-full bg-white
-            border border-gray-300 md:border-2 md:border-gray-200
-            hover:border-amber-500 hover:bg-amber-50
-            flex items-center justify-center
-            text-gray-700 hover:text-amber-600
-            shadow-md md:shadow-lg
-            transition-all duration-300",
+        'class' => "absolute {$positionClass}
+                top-1/2 transform -translate-y-1/2 z-10
+                w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12
+                bg-white rounded-full shadow-md hover:shadow-lg
+                flex items-center justify-center
+                transition-all duration-300 hover:scale-110",
     ]) }}>
-    <span class="text-lg md:text-xl font-bold">
-        {{ $icon }}
-    </span>
+    <svg class="w-4 h-4 sm:w-5 sm:h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="{{ $svgPath }}"></path>
+    </svg>
 </button>

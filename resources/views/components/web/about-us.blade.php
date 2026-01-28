@@ -1,25 +1,73 @@
-{{-- About Us Banner Section --}}
-<section class="py-8 sm:py-10 md:py-14 bg-white">
-    <div class="container mx-auto px-3 sm:px-4">
-        {{-- Section Header --}}
-        <div class="text-center mb-8 sm:mb-10 md:mb-12">
-            <h2 class="text-2xl sm:text-3xl md:text-4xl luxury-font text-gray-900 mb-3">About Our Jewelry</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">Where timeless elegance meets modern
-                craftsmanship</p>
-        </div>
+{{-- Simple About Us Component --}}
+<section class="py-12 sm:py-16 bg-white">
+    <div class="container mx-auto px-4 sm:px-6">
+        <div class="max-w-4xl mx-auto">
 
-        {{-- Banner Image --}}
-        <div class="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl">
-            {{-- Tall, elegant jewelry image --}}
-            <img src="{{ asset('images/banners/banner1.webp') }}" alt="Luxury rings and jewelry display"
-                class="w-full h-80 sm:h-[500px] md:h-[600px] lg:h-[700px] object-cover" loading="lazy">
-
-            {{-- Gold decorative border effect --}}
-            <div class="absolute inset-0 border-2 border-amber-400/20 rounded-xl sm:rounded-2xl pointer-events-none">
+            {{-- Header --}}
+            <div class="text-center mb-10 sm:mb-12">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+                    About Exquisite Jewelry
+                </h2>
+                <div class="w-16 h-1 bg-amber-500 mx-auto mb-4"></div>
+                <p class="text-gray-600 text-lg">
+                    Crafting timeless elegance since 1995
+                </p>
             </div>
 
-            {{-- Shine effect overlay --}}
-            <div class="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent"></div>
+            {{-- Main Content --}}
+            <div class="space-y-6 text-gray-700 leading-relaxed">
+                <p>
+                    At Exquisite Jewelry, we believe every piece tells a story. Founded by master jeweler
+                    Rajesh Mehta, our family-run business has been creating heirloom-quality jewelry for
+                    over 28 years. What started as a small workshop in Jaipur has grown into a beloved
+                    brand known for its exceptional craftsmanship and ethical practices.
+                </p>
+
+                <p>
+                    Each piece in our collection is meticulously handcrafted by our skilled artisans who
+                    combine traditional techniques with contemporary design. We use only conflict-free
+                    diamonds and responsibly sourced precious metals, ensuring that beauty doesn't come
+                    at the cost of ethics.
+                </p>
+
+                <p>
+                    From engagement rings that symbolize lifelong commitments to statement pieces that
+                    celebrate personal milestones, our jewelry is designed to be treasured for generations.
+                    We don't just sell jewelry; we help you create memories that last forever.
+                </p>
+            </div>
+
+            {{-- Simple Stats --}}
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 mt-10 sm:mt-12">
+                <div class="text-center">
+                    <div class="text-2xl sm:text-3xl font-bold text-amber-600 mb-1">28+</div>
+                    <div class="text-sm text-gray-600">Years Experience</div>
+                </div>
+
+                <div class="text-center">
+                    <div class="text-2xl sm:text-3xl font-bold text-amber-600 mb-1">50K+</div>
+                    <div class="text-sm text-gray-600">Happy Customers</div>
+                </div>
+
+                <div class="text-center">
+                    <div class="text-2xl sm:text-3xl font-bold text-amber-600 mb-1">500+</div>
+                    <div class="text-sm text-gray-600">Designs Created</div>
+                </div>
+
+                <div class="text-center">
+                    <div class="text-2xl sm:text-3xl font-bold text-amber-600 mb-1">100%</div>
+                    <div class="text-sm text-gray-600">Ethically Sourced</div>
+                </div>
+            </div>
+
+            {{-- Simple CTA --}}
+            <div class="text-center mt-10 sm:mt-12">
+                <a href="/contact"
+                    class="inline-block px-6 sm:px-8 py-3 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-lg transition-colors duration-300">
+                    Visit Our Store
+                </a>
+            </div>
+
         </div>
     </div>
 </section>
