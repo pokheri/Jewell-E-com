@@ -77,9 +77,9 @@
     <x-web.header />
     <!-- Page Content (for demonstration) -->
     <main class="pt-20">
-        <x-web.slider />
+        {{-- <x-web.slider /> --}}
 
-        <x-web.product-category />
+        {{-- <x-web.product-category /> --}}
         {{-- <x-web.best-seller /> --}}
         {{-- Rings section  --}}
         {{-- <x-web.product-section title="Exquisite Rings Collection" bgColor="white"
@@ -90,18 +90,19 @@
             subtitle="Add a touch of sophistication to your ensemble" buttonText="View all Necklace" /> --}}
 
 
-        {{-- <x-web.product-section title="Sparkling Earrings for Every Style" bgColor="white"
-            subtitle="Light up your look with our earring collection" buttonText="View all Earrings" /> --}}
+        <x-web.product-section title="Sparkling Earrings for Every Style" bgColor="white"
+            subtitle="Light up your look with our earring collection" buttonText="View all Earrings" />
 
 
 
-        <x-web.product-detail />
+        {{-- <x-web.product-detail /> --}}
         {{-- Rings section  --}}
-        <x-web.product-section title="Luxury Bracelet Collection" bgColor="gray-50"
-            subtitle="From delicate chains to bold cuffs" buttonText="View all Bracelet" />
+        {{-- <x-web.product-section title="Luxury Bracelet Collection" bgColor="gray-50"
+            subtitle="From delicate chains to bold cuffs" buttonText="View all Bracelet" /> --}}
 
-
-        <x-web.about-us />
+        {{-- 
+        <x-web.about-us /> --}}
+        <x-web.product-listing />
         <x-web.footer />
     </main>
 
