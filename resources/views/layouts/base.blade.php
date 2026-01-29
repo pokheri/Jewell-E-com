@@ -87,11 +87,11 @@
 
         {{-- Rings section  --}}
         {{-- <x-web.product-section title="Exquisite Necklace Collection" bgColor="gray-50"
-            subtitle="Add a touch of sophistication to your ensemble" buttonText="View all Necklace" /> --}}
+            subtitle="Add a touch of sophistication to your ensemble" buttonText="View all Necklace" />
 
 
         <x-web.product-section title="Sparkling Earrings for Every Style" bgColor="white"
-            subtitle="Light up your look with our earring collection" buttonText="View all Earrings" />
+            subtitle="Light up your look with our earring collection" buttonText="View all Earrings" /> --}}
 
 
 
@@ -100,10 +100,15 @@
         {{-- <x-web.product-section title="Luxury Bracelet Collection" bgColor="gray-50"
             subtitle="From delicate chains to bold cuffs" buttonText="View all Bracelet" /> --}}
 
-        {{-- 
-        <x-web.about-us /> --}}
-        <x-web.product-listing />
-        <x-web.footer />
+
+        {{-- <x-web.about-us />
+        <x-web.product-listing /> --}}
+
+        {{-- <x-web.wishlist /> --}}
+        {{-- <x-web.cart /> --}}
+
+        {{-- <x-web.footer />  --}}
+        <x-web.profile />
     </main>
 
 
